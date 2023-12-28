@@ -38,7 +38,7 @@
                 </div>
             </section>
 
-            <section class="summary">
+            <section class="summary" v-if="total()>0">
                 <strong>Resumo do pedido</strong>
                 <table>
                     <thead>
@@ -55,9 +55,9 @@
 
                         </tr>
                         
-                        <tr v-for="product.quantity * product.price">
+                        <tr>
                             <th>{{Total}}</th>
-                            <th >{{}}</th>
+                            <th >{{  total() }}</th>
                         </tr>
                     </tbody>
                 </table>
