@@ -20,8 +20,8 @@
                 
                 <h3>Lista de Tarefas</h3>
                 
-                <div class="fazer" v-for="tarefa in tarefas" 
-                >  {{tarefas.mensagem}}
+                <div class="fazer" v-for="tarefa in tarefas">  
+                    {{tarefas.mensagem}}
                     <div class="single-todo done" @click="tarefas.status = !tarefas.status"
                     :class="{selected : tarefas.status}" > 
                 </div>
@@ -29,7 +29,7 @@
                 <button class="clear">Limpar tudo</button>
 
                 <input type="text" placeholder="Escreva uma nova tarefa..." id="mensagem" v-for="tarefa in tarefas" v-model="newTarefa.mensagem">
-                <button class="add" @click="addTaref()">Adicionar</button>
+                <button class="add" @click="addTarefa()">Adicionar</button>
 
                 <div class="instructions">
                     Instruções:
