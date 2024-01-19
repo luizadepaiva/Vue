@@ -20,15 +20,19 @@
                 
                 <h3>Lista de Tarefas</h3>
                 
-                <div class="fazer" v-for="tarefa in tarefas">  
-                    {{tarefas.mensagem}}
-                    <div class="single-todo done" @click="tarefas.status = !tarefas.status"
-                    :class="{selected : tarefas.status}" > 
+                <div class="fazer">  
+                    <div v-for="tarefa in tarefas" class="single-todo done" 
+                    :class="{done : tarefas.done}"
+                    @click="tarefas.done = !tarefas.done"
+                     >            
+                    <p>{{tarefas.mensagem}}</p>
+                            
                 </div>
 
                 <button class="clear">Limpar tudo</button>
 
-                <input type="text" placeholder="Escreva uma nova tarefa..." id="mensagem" v-for="tarefa in tarefas" v-model="newTarefa.mensagem">
+                <input type="text" placeholder="Escreva uma nova tarefa..." id="mensagem" 
+                v-model="newTarefa.mensagem">
                 <button class="add" @click="addTarefa()">Adicionar</button>
 
                 <div class="instructions">
@@ -42,8 +46,10 @@
             </section>
 
         </main>
-        <script src="https://unpkg.com/vue@next"></script>
-        <script src="scripts.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+        <script src="script3.js"></script>
     </body>
 
 </html>
